@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import { may } from "../constants";
 import { Fragment } from "react/jsx-runtime";
 
-//const AUTH_URL = 'http://example.com/api_admin/authorization'
+const AUTH_URL = '/api_admin/authorization'
+const AUTH_DATA = {
+  username: 'qq@qq.qq',
+  mail: 'qq@qq.qq',
+  password: 'qq@qq.qq'
+}
 
 const currentDate = new Date();
 const currentMonth = currentDate.getMonth();
@@ -14,6 +19,23 @@ const getCurrentMonthLessonsUrl = `/api_admin/get_lessons_for_a_month/${currentD
 
 const AdminPanel = () => {
   
+  const getTokenFromServer = async () => {
+    try {
+      const response = await fetch (AUTH_URL, {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(AUTH_DATA),
+      })
+      const result = await response.json();
+      console.log('Success:', result);
+    }
+    catch(e) {
+      console.log(e);
+    }
+  }
+  getTokenFromServer();
 
   const getCurrentMonthLessons = async () => {
     try {
@@ -36,7 +58,7 @@ const AdminPanel = () => {
       console.error("Request error:", error);
     }
   }
-  getCurrentMonthLessons();
+  //getCurrentMonthLessons();
   
   return (
     <section id="reviews" className="px-4 md:px-10 lg:px-32 py-28">
