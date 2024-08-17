@@ -381,19 +381,33 @@ jose.exceptions.JWTError: Not enough segments
 
 --- DEBUG | (2024-07-31 18:49:28,945) | Filename:run_fapi.py | Func:def <module> | Проект запущен !
 
---- DEBUG | (2024-07-31 18:49:33,288) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+--- DEBUG | 2024-07-31 13:54:43,872 | Filename:run_fapi.py | Структура проекта успешно сохранена в файле.
 
---- DEBUG | (2024-07-31 18:49:33,296) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+--- DEBUG | 2024-07-31 13:54:43,877 | Filename:async_models.py | База данных уже существует.
 
---- DEBUG | (2024-07-31 18:50:02,776) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+--- DEBUG | 2024-07-31 13:54:43,889 | Filename:async_models.py | as_Все необходимые таблицы уже существуют.
 
---- DEBUG | (2024-07-31 18:50:02,796) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+--- DEBUG | 2024-07-31 13:54:43,891 | Filename:run_fapi.py | Проект запущен !
 
---- DEBUG | (2024-07-31 18:50:02,803) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+--- DEBUG | (2024-07-31 14:02:25,817) | Filename:run_fapi.py | Func:def <module> | Структура проекта успешно сохранена в файле.
 
---- ERROR | (2024-07-31 18:50:54,439) | Filename:authentication.py | Func:def validate_token | Токен недействительный- 
+--- DEBUG | (2024-07-31 14:02:25,820) | Filename:async_models.py | Func:def async_create_database | База данных уже существует.
+
+--- DEBUG | (2024-07-31 14:02:25,826) | Filename:async_models.py | Func:def async_create_database | as_Все необходимые таблицы уже существуют.
+
+--- DEBUG | (2024-07-31 14:02:25,827) | Filename:run_fapi.py | Func:def <module> | Проект запущен !
+
+--- DEBUG | (2024-07-31 14:08:04,328) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-07-31 14:08:04,368) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-07-31 14:08:04,385) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-07-31 14:09:25,901) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-07-31 15:02:45,651) | Filename:authentication.py | Func:def validate_token | Токен недействительный
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -401,28 +415,28 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
---- ERROR | (2024-07-31 18:50:54,458) | Filename:authentication.py | Func:def validate_token | Токен недействительный- 
+--- ERROR | (2024-07-31 15:02:45,702) | Filename:authentication.py | Func:def validate_token | Токен недействительный
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -430,48 +444,38 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
---- DEBUG | (2024-07-31 18:51:35,961) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+--- DEBUG | (2024-08-02 13:14:02,183) | Filename:run_fapi.py | Func:def <module> | Структура проекта успешно сохранена в файле.
 
---- DEBUG | (2024-07-31 18:51:35,967) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+--- DEBUG | (2024-08-02 13:14:02,186) | Filename:async_models.py | Func:def async_create_database | База данных уже существует.
 
---- DEBUG | (2024-07-31 18:52:19,061) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+--- DEBUG | (2024-08-02 13:14:02,199) | Filename:async_models.py | Func:def async_create_database | as_Все необходимые таблицы уже существуют.
 
---- DEBUG | (2024-07-31 18:52:19,080) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+--- DEBUG | (2024-08-02 13:14:02,200) | Filename:run_fapi.py | Func:def <module> | Проект запущен !
 
---- DEBUG | (2024-07-31 18:52:19,087) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+--- DEBUG | (2024-08-02 13:19:34,039) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
 
---- DEBUG | (2024-07-31 18:53:07,905) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
-
---- DEBUG | (2024-07-31 18:53:16,625) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
-
---- DEBUG | (2024-07-31 18:53:16,649) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
-
---- DEBUG | (2024-07-31 18:53:20,426) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
-
---- DEBUG | (2024-07-31 18:53:20,450) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
-
---- ERROR | (2024-07-31 18:53:49,433) | Filename:authentication.py | Func:def validate_token | Токен недействительный- 
+--- ERROR | (2024-08-02 13:19:34,088) | Filename:authentication.py | Func:def validate_token | Токен недействительный
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -479,28 +483,28 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
---- ERROR | (2024-07-31 18:53:51,164) | Filename:authentication.py | Func:def validate_token | Токен недействительный- 
+--- ERROR | (2024-08-02 13:19:34,129) | Filename:authentication.py | Func:def validate_token | Токен недействительный
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -508,28 +512,34 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
---- ERROR | (2024-07-31 18:53:51,176) | Filename:authentication.py | Func:def validate_token | Токен недействительный- 
+--- DEBUG | (2024-08-02 13:21:05,485) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-02 13:21:05,529) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 13:21:05,548) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-08-02 13:41:29,333) | Filename:authentication.py | Func:def validate_token | Токен недействительный
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -537,28 +547,28 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
---- ERROR | (2024-07-31 19:00:03,369) | Filename:authentication.py | Func:def validate_token | Токен недействительный- 
+--- ERROR | (2024-08-02 13:41:29,343) | Filename:authentication.py | Func:def validate_token | Токен недействительный
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -566,38 +576,28 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
---- DEBUG | (2024-07-31 19:00:12,958) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
-
---- DEBUG | (2024-07-31 19:00:12,964) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
-
---- DEBUG | (2024-07-31 19:00:43,265) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
-
---- DEBUG | (2024-07-31 19:00:43,283) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
-
---- DEBUG | (2024-07-31 19:00:43,293) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
-
---- ERROR | (2024-07-31 19:02:54,853) | Filename:authentication.py | Func:def validate_token | Токен недействительный- 
+--- ERROR | (2024-08-02 13:41:55,157) | Filename:authentication.py | Func:def validate_token | Токен недействительный
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -605,28 +605,34 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
---- ERROR | (2024-07-31 19:02:54,868) | Filename:authentication.py | Func:def validate_token | Токен недействительный- 
+--- DEBUG | (2024-08-02 13:42:12,906) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-02 13:42:12,951) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 13:42:12,961) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-08-02 13:44:05,419) | Filename:authentication.py | Func:def validate_token | Токен недействительный
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -634,28 +640,28 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
---- ERROR | (2024-07-31 19:06:22,118) | Filename:authentication.py | Func:def validate_token | Токен недействительный- 
+--- ERROR | (2024-08-02 13:44:05,434) | Filename:authentication.py | Func:def validate_token | Токен недействительный
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -663,28 +669,28 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
---- ERROR | (2024-07-31 19:36:24,034) | Filename:authentication.py | Func:def validate_token | Токен недействительный- 
+--- ERROR | (2024-08-02 13:44:43,518) | Filename:authentication.py | Func:def validate_token | Токен недействительный
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -692,28 +698,34 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
---- ERROR | (2024-07-31 19:36:24,039) | Filename:authentication.py | Func:def validate_token | Токен недействительный- 
+--- DEBUG | (2024-08-02 13:44:58,599) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-02 13:44:58,661) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 13:44:58,671) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-08-02 13:46:34,316) | Filename:authentication.py | Func:def validate_token | Токен недействительный
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -721,28 +733,28 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
---- ERROR | (2024-07-31 20:15:03,039) | Filename:authentication.py | Func:def validate_token | Токен недействительный- 
+--- ERROR | (2024-08-02 13:46:34,326) | Filename:authentication.py | Func:def validate_token | Токен недействительный
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -750,28 +762,36 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
---- ERROR | (2024-07-31 20:15:03,059) | Filename:authentication.py | Func:def validate_token | Токен недействительный- 
+--- DEBUG | (2024-08-02 13:48:11,840) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-02 13:48:11,891) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 13:48:11,901) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 13:49:58,319) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-08-02 13:50:03,081) | Filename:authentication.py | Func:def validate_token | Токен недействительный
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -779,22 +799,1926 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 13:50:03,095) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- DEBUG | (2024-08-02 13:50:17,429) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-02 13:50:17,483) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 13:50:17,493) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-08-02 13:50:25,855) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 13:50:25,866) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 13:52:41,307) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- DEBUG | (2024-08-02 13:52:59,838) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-02 13:52:59,882) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 13:52:59,893) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 14:16:08,213) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-08-02 14:16:17,106) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 14:16:17,118) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 14:17:40,121) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 14:17:40,130) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 14:25:48,387) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 14:25:54,791) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 14:25:54,808) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- DEBUG | (2024-08-02 14:28:26,351) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-02 14:28:26,409) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 14:28:26,419) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-08-02 14:29:40,432) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 14:29:40,444) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 14:36:45,940) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 14:36:45,952) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- DEBUG | (2024-08-02 14:37:49,427) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-02 14:37:49,487) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 14:37:49,496) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-08-02 14:37:57,537) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 14:37:57,547) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- DEBUG | (2024-08-02 14:40:27,866) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-02 14:40:27,913) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 14:40:27,924) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 14:54:30,140) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 14:55:21,608) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-08-02 15:59:44,635) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- DEBUG | (2024-08-02 19:58:09,530) | Filename:run_fapi.py | Func:def <module> | Структура проекта успешно сохранена в файле.
+
+--- DEBUG | (2024-08-02 19:58:09,536) | Filename:async_models.py | Func:def async_create_database | База данных уже существует.
+
+--- DEBUG | (2024-08-02 19:58:09,541) | Filename:async_models.py | Func:def async_create_database | as_Все необходимые таблицы уже существуют.
+
+--- DEBUG | (2024-08-02 19:58:09,543) | Filename:run_fapi.py | Func:def <module> | Проект запущен !
+
+--- DEBUG | (2024-08-02 19:59:04,331) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-02 19:59:04,376) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 19:59:04,395) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-08-02 19:59:11,683) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 19:59:11,724) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- DEBUG | (2024-08-02 19:59:18,500) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-02 19:59:18,544) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 19:59:18,556) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-08-02 20:00:46,311) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 20:00:46,331) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | (2024-08-02 20:01:18,934) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- DEBUG | (2024-08-02 20:01:31,238) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-02 20:01:31,292) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-02 20:01:31,301) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:17:39,491) | Filename:run_fapi.py | Func:def <module> | Структура проекта успешно сохранена в файле.
+
+--- DEBUG | (2024-08-07 14:17:39,495) | Filename:async_models.py | Func:def async_create_database | База данных уже существует.
+
+--- DEBUG | (2024-08-07 14:17:39,505) | Filename:async_models.py | Func:def async_create_database | as_Все необходимые таблицы уже существуют.
+
+--- DEBUG | (2024-08-07 14:17:39,506) | Filename:run_fapi.py | Func:def <module> | Проект запущен !
+
+--- DEBUG | (2024-08-07 14:18:54,688) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-07 14:18:54,734) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:18:54,752) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:19:06,343) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:19:06,356) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:19:09,427) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:19:09,439) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:30:42,413) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:35:40,384) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:35:58,286) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:36:39,279) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:42:20,275) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:42:24,071) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:42:24,084) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:43:01,278) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:43:12,282) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:43:21,282) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:43:23,976) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 14:43:23,993) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:08:04,275) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:11:12,844) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:11:12,853) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:15:33,453) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:15:33,463) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:15:36,368) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:15:36,382) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-08-07 15:43:23,309) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | (2024-08-07 15:43:23,333) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | (2024-08-07 15:43:49,023) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | (2024-08-07 15:43:49,030) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- DEBUG | (2024-08-07 15:44:05,885) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-07 15:44:05,930) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:44:05,941) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:44:35,282) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:44:38,786) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:44:38,796) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:44:40,526) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:45:13,293) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:46:09,290) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:46:38,358) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:46:44,954) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:46:44,966) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:48:16,285) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:48:19,633) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:48:19,655) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:48:45,516) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-07 15:48:45,598) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:48:45,613) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:58:53,304) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:59:36,134) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:59:36,148) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:59:56,271) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:59:58,891) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 15:59:58,904) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:00:00,997) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:00:02,735) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:00:05,665) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:00:09,059) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:32:25,063) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:32:25,076) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:32:33,172) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:32:35,888) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:32:49,549) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:32:49,562) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:35:08,284) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:35:11,725) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:35:11,739) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:35:13,850) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:35:18,771) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:35:20,692) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:36:20,303) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:36:22,742) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:36:22,759) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:36:25,114) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 16:36:26,429) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-08-07 18:28:26,276) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | (2024-08-07 18:28:28,837) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | (2024-08-07 18:28:28,847) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- DEBUG | (2024-08-07 18:28:40,958) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-07 18:28:41,004) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:28:41,015) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:28:42,912) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:29:07,292) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:29:08,817) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:29:08,832) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:29:10,120) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:29:16,109) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:30:46,299) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:30:48,173) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:30:48,245) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:30:49,805) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:32:21,297) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:32:27,143) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:32:27,152) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:32:28,908) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:35:22,868) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:35:22,880) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:35:27,043) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:36:21,294) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:36:24,366) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:36:24,379) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:36:25,654) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:36:41,784) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:38:53,305) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:38:53,316) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:38:56,156) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:38:56,170) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:38:57,721) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 18:39:04,435) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- ERROR | (2024-08-07 21:08:38,342) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | (2024-08-07 21:08:38,359) | Filename:authentication.py | Func:def validate_token | Токен недействительный
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- DEBUG | (2024-08-07 21:08:53,327) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-07 21:08:53,413) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 21:08:53,432) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 21:08:55,940) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 21:08:59,084) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 21:09:03,539) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 21:09:04,524) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 21:09:08,668) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 21:09:09,677) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 21:09:12,919) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 21:09:22,403) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-07 21:09:22,419) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:31:08,575) | Filename:run_fapi.py | Func:def <module> | Структура проекта успешно сохранена в файле.
+
+--- DEBUG | (2024-08-09 23:31:08,578) | Filename:async_models.py | Func:def async_create_database | База данных уже существует.
+
+--- DEBUG | (2024-08-09 23:31:08,590) | Filename:async_models.py | Func:def async_create_database | as_Все необходимые таблицы уже существуют.
+
+--- DEBUG | (2024-08-09 23:31:08,593) | Filename:run_fapi.py | Func:def <module> | Проект запущен !
+
+--- DEBUG | (2024-08-09 23:31:46,908) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-09 23:31:46,954) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:31:46,971) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:31:49,225) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:31:50,705) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:31:59,938) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:31:59,959) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:32:02,579) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:32:07,557) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:32:10,878) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:32:14,455) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:32:14,472) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:33:34,446) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:34:07,481) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:34:09,158) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:34:09,174) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:34:11,174) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:35:53,461) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:35:57,271) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:35:57,286) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:35:58,599) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:42:21,351) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:42:28,611) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:42:53,112) | Filename:routes_admin.py | Func:def login_for_access_token | Пользователь прошел авторизацию.
+
+--- DEBUG | (2024-08-09 23:42:53,190) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:42:53,207) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:42:55,494) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:42:56,271) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:42:57,002) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:42:57,994) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:42:58,730) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:44:12,444) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:44:14,856) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:44:14,871) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:44:16,680) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:45:39,452) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:45:41,933) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:45:41,948) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:45:54,275) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:45:54,287) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:47:38,460) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:47:51,457) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:47:53,999) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:47:54,015) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:47:55,392) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:48:12,456) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:48:14,883) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:48:14,893) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-09 23:48:17,496) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-10 00:09:15,456) | Filename:authentication.py | Func:def validate_token | Авторизован пользователь: admin@admin.admin
+
+--- DEBUG | (2024-08-10 17:38:53,478) | Filename:run_fapi.py | Func:def <module> | Структура проекта успешно сохранена в файле.
+
+--- DEBUG | (2024-08-10 17:38:53,483) | Filename:async_models.py | Func:def async_create_database | База данных уже существует.
+
+--- DEBUG | (2024-08-10 17:38:53,490) | Filename:async_models.py | Func:def async_create_database | as_Все необходимые таблицы уже существуют.
+
+--- DEBUG | (2024-08-10 17:38:53,490) | Filename:run_fapi.py | Func:def <module> | Проект запущен !
+
+--- DEBUG | (2024-08-10 17:41:40,458) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 17:41:44,377) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 17:41:44,390) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 17:49:15,355) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 17:50:08,461) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 17:50:12,745) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 17:50:12,772) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 17:50:18,586) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 17:50:18,595) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 17:52:52,763) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 17:52:52,777) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 17:54:27,448) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 17:54:30,577) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 17:54:30,590) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 22:58:27,504) | Filename:run_fapi.py | Func:def <module> | Структура проекта успешно сохранена в файле.
+
+--- DEBUG | (2024-08-10 22:58:27,507) | Filename:async_models.py | Func:def async_create_database | База данных уже существует.
+
+--- DEBUG | (2024-08-10 22:58:27,523) | Filename:async_models.py | Func:def async_create_database | as_Все необходимые таблицы уже существуют.
+
+--- DEBUG | (2024-08-10 22:58:27,523) | Filename:run_fapi.py | Func:def <module> | Проект запущен !
+
+--- DEBUG | (2024-08-10 23:00:25,128) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:00:25,142) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:00:32,391) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:00:32,414) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:01:46,776) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:01:46,795) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:01:49,880) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:01:49,897) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:04:12,626) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:04:12,634) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:04:15,577) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:04:15,590) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:05:54,943) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:05:54,950) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:05:58,049) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:05:58,091) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:08:12,480) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:08:12,491) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:08:18,573) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:08:18,614) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:10:19,058) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:10:19,078) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:10:23,617) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:10:23,634) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:13:42,757) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:13:42,779) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:13:48,155) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:13:48,171) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:14:05,733) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:14:05,743) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:14:12,376) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:14:12,384) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:18:58,445) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:19:03,357) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:19:03,370) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:19:32,964) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:19:32,973) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:19:45,120) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-10 23:19:45,130) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:09:50,951) | Filename:run_fapi.py | Func:def <module> | Структура проекта успешно сохранена в файле.
+
+--- DEBUG | (2024-08-14 14:09:50,954) | Filename:async_models.py | Func:def async_create_database | База данных уже существует.
+
+--- DEBUG | (2024-08-14 14:09:50,965) | Filename:async_models.py | Func:def async_create_database | as_Все необходимые таблицы уже существуют.
+
+--- DEBUG | (2024-08-14 14:09:50,966) | Filename:run_fapi.py | Func:def <module> | Проект запущен !
+
+--- DEBUG | (2024-08-14 14:10:39,383) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:10:39,400) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:22:50,918) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:22:50,935) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:24:08,132) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:24:08,242) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:37:14,971) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:37:14,991) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:38:56,147) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:39:00,249) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:39:00,362) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:39:56,073) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:39:56,083) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:40:17,021) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:40:17,030) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:40:22,768) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:40:22,785) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:49:24,753) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:49:24,845) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:50:40,154) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:50:40,164) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:50:44,131) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 14:50:44,142) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 15:17:54,224) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 15:17:54,232) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 15:18:03,164) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 15:18:08,033) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 15:18:08,046) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 15:18:31,184) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 15:26:09,152) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 15:36:14,569) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 15:36:14,577) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 20:45:00,901) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 20:45:00,923) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:02:34,658) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:02:34,679) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:03:05,536) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:03:05,546) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:23:42,896) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:23:42,920) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:42:49,869) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:42:49,880) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:43:40,788) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:43:40,797) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:47:17,859) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:47:17,867) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:47:26,081) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:47:26,089) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:58:21,406) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:58:21,422) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:59:32,929) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 21:59:32,937) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 22:00:45,905) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 22:00:45,916) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 22:17:52,560) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-14 22:17:52,577) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:17:11,178) | Filename:run_fapi.py | Func:def <module> | Структура проекта успешно сохранена в файле.
+
+--- DEBUG | (2024-08-15 14:17:11,183) | Filename:async_models.py | Func:def async_create_database | База данных уже существует.
+
+--- DEBUG | (2024-08-15 14:17:11,188) | Filename:async_models.py | Func:def async_create_database | as_Все необходимые таблицы уже существуют.
+
+--- DEBUG | (2024-08-15 14:17:11,190) | Filename:run_fapi.py | Func:def <module> | Проект запущен !
+
+--- DEBUG | (2024-08-15 14:17:56,101) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:17:56,120) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:26:35,924) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:26:35,932) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:28:29,173) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:28:48,493) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:28:48,510) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:33:06,130) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:33:09,272) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:33:09,297) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:33:43,139) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:33:45,961) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:33:45,986) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:34:37,150) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:34:42,291) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:34:42,355) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:35:20,146) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:35:24,281) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:35:24,307) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:37:26,655) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:37:26,664) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:37:30,127) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:39:25,747) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:39:25,759) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:40:00,160) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:40:49,159) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:40:49,190) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:45:05,131) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:45:07,844) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:45:07,872) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:45:23,128) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:45:39,985) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:45:40,058) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:57:39,766) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:57:39,773) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 14:57:42,162) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:03:43,491) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:03:43,500) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:03:55,152) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:07:44,138) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:07:44,146) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:10:39,247) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:10:39,262) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:15:54,141) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:15:54,151) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:16:04,138) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:16:04,149) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:16:10,989) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:16:11,010) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:41:10,762) | Filename:run_fapi.py | Func:def <module> | Структура проекта успешно сохранена в файле.
+
+--- DEBUG | (2024-08-15 15:41:10,765) | Filename:async_models.py | Func:def async_create_database | База данных уже существует.
+
+--- DEBUG | (2024-08-15 15:41:10,770) | Filename:async_models.py | Func:def async_create_database | as_Все необходимые таблицы уже существуют.
+
+--- DEBUG | (2024-08-15 15:41:10,772) | Filename:run_fapi.py | Func:def <module> | Проект запущен !
+
+--- DEBUG | (2024-08-15 15:41:29,426) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:41:29,439) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:42:17,194) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:44:18,672) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:44:18,709) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:46:58,587) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 15:46:58,595) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:04:27,974) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:04:27,998) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:07:26,139) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:07:31,826) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:07:31,869) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:10:46,876) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:10:46,937) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:10:51,224) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:10:51,248) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:11:04,163) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:11:04,179) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:16:56,860) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:16:57,119) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:17:31,080) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:17:31,172) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:17:48,204) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 16:17:48,248) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:08:04,016) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:16:25,128) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:16:25,169) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:16:33,305) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:16:33,327) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:19:30,494) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:19:30,502) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:19:37,165) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:19:37,174) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:19:53,478) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:19:53,514) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:21:47,144) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:22:19,502) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:22:19,576) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:23:09,582) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:23:12,302) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:23:12,317) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:24:14,207) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:24:14,238) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:24:38,043) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:24:38,123) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:30:49,977) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:30:49,989) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:31:17,403) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:31:17,449) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:31:50,164) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:31:50,203) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:32:18,903) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:33:50,963) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:34:55,447) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:34:55,456) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:36:58,420) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:36:58,431) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:37:17,308) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:37:57,072) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:43:00,112) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:43:00,142) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:43:29,927) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:43:48,020) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:43:50,403) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:43:50,412) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:44:06,928) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:45:34,784) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:45:51,462) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:45:53,670) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:45:53,711) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:46:56,172) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:49:52,781) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:50:00,541) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-15 17:50:18,588) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:04:07,882) | Filename:run_fapi.py | Func:def <module> | Структура проекта успешно сохранена в файле.
+
+--- DEBUG | (2024-08-16 22:04:07,885) | Filename:async_models.py | Func:def async_create_database | База данных уже существует.
+
+--- DEBUG | (2024-08-16 22:04:07,899) | Filename:async_models.py | Func:def async_create_database | as_Все необходимые таблицы уже существуют.
+
+--- DEBUG | (2024-08-16 22:04:07,900) | Filename:run_fapi.py | Func:def <module> | Проект запущен !
+
+--- DEBUG | (2024-08-16 22:04:41,310) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:04:41,329) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:05:23,619) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:05:26,126) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:05:26,139) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:05:40,230) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:05:40,342) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:06:15,026) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:06:15,063) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:09:28,810) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:09:28,861) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:11:30,797) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:15:06,295) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:15:06,348) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:15:32,161) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:15:32,185) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:16:11,122) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:16:11,248) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:16:25,444) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:16:25,475) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:16:52,962) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:16:52,980) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:17:41,192) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:17:41,264) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:17:54,841) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:17:54,959) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:18:20,295) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:18:20,321) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:19:14,178) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:19:18,383) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:19:18,396) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-16 22:19:57,941) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 13:59:16,508) | Filename:run_fapi.py | Func:def <module> | Структура проекта успешно сохранена в файле.
+
+--- DEBUG | (2024-08-17 13:59:16,511) | Filename:async_models.py | Func:def async_create_database | База данных уже существует.
+
+--- DEBUG | (2024-08-17 13:59:16,515) | Filename:async_models.py | Func:def async_create_database | as_Все необходимые таблицы уже существуют.
+
+--- DEBUG | (2024-08-17 13:59:16,517) | Filename:run_fapi.py | Func:def <module> | Проект запущен !
+
+--- DEBUG | (2024-08-17 14:01:34,599) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:01:34,614) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:02:18,601) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:02:20,990) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:02:20,999) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:02:22,651) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:02:24,382) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:02:25,119) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:02:25,353) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:03:48,425) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:03:48,436) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:04:02,527) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:04:02,539) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:04:04,823) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:04:05,982) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:05:52,039) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:05:53,339) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:09:47,487) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:09:47,609) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:10:11,471) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:10:15,741) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:10:17,104) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:10:32,109) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:10:36,099) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:10:36,109) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:10:37,578) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:10:50,474) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:10:50,499) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:13:41,678) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 14:13:43,859) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 15:42:48,703) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 15:42:48,713) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 15:43:06,278) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 15:43:06,335) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:13:18,736) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:13:18,784) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:14:10,616) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:14:10,672) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:14:22,702) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:14:22,716) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:16:30,051) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:16:30,071) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:28:47,199) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:28:47,207) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:30:31,497) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:30:31,508) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:32:10,406) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:32:10,417) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:33:04,756) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:33:04,765) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:33:28,558) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:33:28,568) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:34:16,492) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:34:16,501) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:35:05,051) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:35:05,061) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:35:23,747) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:35:23,757) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:35:47,688) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:35:59,039) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:35:59,048) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:36:11,223) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:36:31,553) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:36:34,877) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:36:34,889) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:38:47,411) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:38:47,470) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:39:35,331) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:39:38,503) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:39:38,519) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:39:40,188) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- ERROR | (2024-08-17 16:39:45,804) | Filename:async_models.py | Func:def async_lesson_dates_for_the_month_db_frontend | error - Incorrect date format: time data '2025-13-1' does not match format '%Y-%m-%d'
+
+--- ERROR | (2024-08-17 16:39:48,032) | Filename:async_models.py | Func:def async_lesson_dates_for_the_month_db_frontend | error - Incorrect date format: time data '2024-0-1' does not match format '%Y-%m-%d'
+
+--- DEBUG | (2024-08-17 16:39:49,029) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:39:49,767) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:39:50,405) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:39:54,358) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+
+--- DEBUG | (2024-08-17 16:39:54,588) | Filename:routes_admin.py | Func:def get_lesson_dates_for_the_month_frontend | Запрос для получения дат на месяц ОК
+

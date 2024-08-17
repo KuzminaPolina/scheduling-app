@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 --- ERROR | 2024-07-31 18:21:29,255 | Токен недействительный | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+--- ERROR | 2024-07-31 15:02:45,651 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -8,6 +14,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -15,12 +22,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -30,6 +47,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 18:21:29,262 | Токен недействительный | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-07-31 15:02:45,702 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -37,6 +65,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -44,12 +73,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -59,6 +98,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 18:24:12,817 | Токен недействительный | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:19:34,088 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -66,6 +116,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -73,12 +124,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 117, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -88,6 +149,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 18:24:12,826 | Токен недействительный | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:19:34,129 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -95,6 +167,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -102,12 +175,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 117, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -117,6 +200,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 18:25:36,638 | Токен недействительный | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:41:29,333 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -124,6 +218,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -131,12 +226,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 117, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -146,6 +251,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 18:25:36,650 | Токен недействительный | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:41:29,343 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -153,6 +269,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -160,12 +277,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 117, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -175,6 +302,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 18:33:16,358 | Токен недействительный | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:41:55,157 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -182,6 +320,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -189,12 +328,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 117, in validate_token
     # В данном примере мы просто проверяем, что в токене есть поле 'sub'
            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -291,6 +440,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 18:45:33,849 | Токен недействительный | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:44:05,419 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -298,6 +458,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -305,12 +466,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -320,6 +491,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 18:50:54,439 | Токен недействительный-  | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:44:05,434 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -327,6 +509,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -334,12 +517,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -349,6 +542,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 18:50:54,458 | Токен недействительный-  | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:44:43,518 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -356,6 +560,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -363,12 +568,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -378,6 +593,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 18:53:49,433 | Токен недействительный-  | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:46:34,316 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -385,6 +611,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -392,12 +619,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -407,6 +644,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 18:53:51,164 | Токен недействительный-  | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:46:34,326 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -414,6 +662,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -421,12 +670,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -436,6 +695,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 18:53:51,176 | Токен недействительный-  | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:50:03,081 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -443,6 +713,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -450,12 +721,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -465,6 +746,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 19:00:03,369 | Токен недействительный-  | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:50:03,095 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -472,6 +764,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -479,12 +772,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -494,6 +797,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 19:02:54,853 | Токен недействительный-  | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:50:25,855 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -501,6 +815,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -508,12 +823,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -523,6 +848,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 19:02:54,868 | Токен недействительный-  | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:50:25,866 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -530,6 +866,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -537,12 +874,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -552,6 +899,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 19:06:22,118 | Токен недействительный-  | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 13:52:41,307 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -559,6 +917,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -566,12 +925,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -581,6 +950,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 19:36:24,034 | Токен недействительный-  | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 14:16:17,106 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -588,6 +968,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -595,12 +976,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -610,6 +1001,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 19:36:24,039 | Токен недействительный-  | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 14:16:17,118 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -617,6 +1019,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -624,12 +1027,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -639,6 +1052,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 20:15:03,039 | Токен недействительный-  | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 14:17:40,121 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -646,6 +1070,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -653,12 +1078,22 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -668,6 +1103,17 @@ jose.exceptions.JWTError: Not enough segments
 --- ERROR | 2024-07-31 20:15:03,059 | Токен недействительный-  | Filename:authentication.py Func:def validate_token
 Traceback (most recent call last):
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 14:17:40,130 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+>>>>>>> 27e3c87 (bakend files)
     signing_input, crypto_segment = jwt.rsplit(b".", 1)
     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ValueError: not enough values to unpack (expected 2, got 1)
@@ -675,6 +1121,7 @@ ValueError: not enough values to unpack (expected 2, got 1)
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
     payload = jws.verify(token, key, algorithms, verify=verify_signature)
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -682,15 +1129,563 @@ Traceback (most recent call last):
     header, payload, signing_input, signature = _load(token)
                                                 ^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+=======
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+>>>>>>> 27e3c87 (bakend files)
     raise JWSError("Not enough segments")
 jose.exceptions.JWSError: Not enough segments
 
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
+<<<<<<< HEAD
   File "C:\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   File "C:\scheduling-app\backend\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
     raise JWTError(e)
 jose.exceptions.JWTError: Not enough segments
+=======
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 14:25:48,387 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 14:25:54,791 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 14:25:54,808 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 14:29:40,432 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 14:29:40,444 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 14:36:45,940 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 14:36:45,952 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 14:37:57,537 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 14:37:57,547 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 15:59:44,635 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | 2024-08-02 19:59:11,683 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 19:59:11,724 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 20:00:46,311 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 20:00:46,331 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-02 20:01:18,934 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 176, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 142, in decode
+    payload = jws.verify(token, key, algorithms, verify=verify_signature)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 70, in verify
+    header, payload, signing_input, signature = _load(token)
+                                                ^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jws.py", line 180, in _load
+    raise JWSError("Not enough segments")
+jose.exceptions.JWSError: Not enough segments
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 144, in decode
+    raise JWTError(e)
+jose.exceptions.JWTError: Not enough segments
+--- ERROR | 2024-08-07 15:43:23,309 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | 2024-08-07 15:43:23,333 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | 2024-08-07 15:43:49,023 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | 2024-08-07 15:43:49,030 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | 2024-08-07 18:28:26,276 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | 2024-08-07 18:28:28,837 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | 2024-08-07 18:28:28,847 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | 2024-08-07 21:08:38,342 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | 2024-08-07 21:08:38,359 | Токен недействительный | Filename:authentication.py Func:def validate_token
+Traceback (most recent call last):
+  File "c:\Users\Etein\Documents\GitHub\scheduling-app\backend\api_fast_api\auth\authentication.py", line 116, in validate_token
+    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 157, in decode
+    _validate_claims(
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 481, in _validate_claims
+    _validate_exp(claims, leeway=leeway)
+  File "C:\Users\Etein\Documents\GitHub\scheduling-app\.venv\Lib\site-packages\jose\jwt.py", line 314, in _validate_exp
+    raise ExpiredSignatureError("Signature has expired.")
+jose.exceptions.ExpiredSignatureError: Signature has expired.
+--- ERROR | 2024-08-17 16:39:45,804 | error - Incorrect date format: time data '2025-13-1' does not match format '%Y-%m-%d' | Filename:async_models.py Func:def async_lesson_dates_for_the_month_db_frontend
+
+--- ERROR | 2024-08-17 16:39:48,032 | error - Incorrect date format: time data '2024-0-1' does not match format '%Y-%m-%d' | Filename:async_models.py Func:def async_lesson_dates_for_the_month_db_frontend
+
+>>>>>>> 27e3c87 (bakend files)
