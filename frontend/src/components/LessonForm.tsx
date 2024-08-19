@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useAdminStore } from "../store/store";
 import { observer } from "mobx-react-lite";
+import { sendLessonRequest } from "../api/sendLessonRequest";
 
 type FormFields = {
   name: string;
@@ -34,25 +35,12 @@ const LessonForm = observer(() => {
   }, [store.selectedDate]);
 
   //Отправка данных из формы на сервер:
-  const onSubmit: SubmitHandler<FormFields> = async (data) => {
+  const onLessonFormSubmit: SubmitHandler<FormFields> = async (data) => {
     try {
-      const response = await fetch(
-        "/api_calendar/receiving-data-from-the-calendar",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
+      const response = await sendLessonRequest(data);
       if (response.ok) {
         // Очистить значения ввода в форме
         reset();
-      } else {
-        // Обработка ошибки от сервера
-        console.error("Request failed:", response.statusText);
-        throw new Error();
       }
     } catch (error) {
       // Обработка ошибок при выполнении запроса
@@ -69,7 +57,7 @@ const LessonForm = observer(() => {
         id="appointmentForm"
         className="flex flex-col gap-5"
         autoComplete="off"
-        onSubmit={handleSubmit(onSubmit)}
+        onSubmit={handleSubmit(onLessonFormSubmit)}
       >
         <input
           {...register("name", { required: "Please enter your name" })}

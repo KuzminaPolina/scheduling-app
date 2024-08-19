@@ -6,7 +6,7 @@ import { observer } from "mobx-react-lite";
 
 const date = new Date();
 
-interface lesson {
+type lesson = {
   id: number;
   email: string;
   firstName: string;
@@ -15,13 +15,13 @@ interface lesson {
   selectedDate: string;
   selectedTime: string;
   confirmed: boolean;
-}
+};
 
-interface month {
+type month = {
   id: number;
   date: string;
   lessons: lesson[];
-}
+};
 
 const AdminPanel = observer(() => {
   const store = useAdminStore();
