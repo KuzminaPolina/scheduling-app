@@ -17,11 +17,11 @@ function App() {
         <Hero />
       </header>
       <main>
-        <About />
+        <SchedulingComponent />
         <Reviews />
         <Contacts />
         <Teaching />
-        <SchedulingComponent />
+        <About />
       </main>
       <footer>
         <Footer />

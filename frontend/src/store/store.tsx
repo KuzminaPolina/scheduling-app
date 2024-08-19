@@ -126,7 +126,6 @@ export class AdminStore {
       this.currentMonth + 1
     );
     const formattedResponse = this.formatData(response);
-    console.log(formattedResponse);
     this.setCurrentMonthLessons(formattedResponse);
   }
 }

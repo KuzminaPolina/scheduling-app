@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useAdminStore } from "../store/store";
 import { observer } from "mobx-react-lite";
 //import { june } from "../constants";
+import { v4 as uuidv4 } from "uuid";
 
 const Calendar = observer(() => {
   const store = useAdminStore();
@@ -75,7 +76,7 @@ const Calendar = observer(() => {
       </div>
       <table className="w-[300px]">
         <thead>
-          <tr>
+          <tr key={uuidv4()}>
             <th
               colSpan={7}
               id="monthYear"
@@ -84,7 +85,7 @@ const Calendar = observer(() => {
               {currentMonthName} {year}
             </th>
           </tr>
-          <tr>
+          <tr key={uuidv4()}>
             <th className="w-[60px] h-[60px] text-center text-black">Mon</th>
             <th className="w-[60px] h-[60px] text-center text-black">Tue</th>
             <th className="w-[60px] h-[60px] text-center text-black">Wed</th>
@@ -94,10 +95,10 @@ const Calendar = observer(() => {
             <th className="w-[60px] h-[60px] text-center text-black">Sn</th>
           </tr>
         </thead>
-        <tbody id="days">
+        <tbody id="days" key={uuidv4()}>
           {calendarData.map((week) => {
             return (
-              <tr>
+              <tr key={uuidv4()}>
                 {week.map((day) => {
                   const currentFullDate = `${year}-${month + 1}-${day}`;
                   const isDayBooked = store.currentMonthLessons.some(
@@ -106,6 +107,7 @@ const Calendar = observer(() => {
 
                   return (
                     <td
+                      key={uuidv4()}
                       className={`${
                         day === currentDay && month === currentMonth
                           ? "today"
