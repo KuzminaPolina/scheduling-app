@@ -3,6 +3,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 import { sendLoginDataToServer } from "../api/submitLoginData";
+import { useAdminStore } from "../store/store";
 
 type FormFields = {
   username: string;
@@ -16,6 +17,7 @@ type ResponseToken = {
 };
 
 export const ModalPage = observer(() => {
+  const store = useAdminStore();
   const {
     register,
     reset,
@@ -36,11 +38,11 @@ export const ModalPage = observer(() => {
         localStorage.setItem("token", tokenData.access_token);
         //Очистить значения ввода в форме
         reset();
+        store.isLoggedIn = true;
         //Перейти в личный кабинет
         navigate("/english-teacher-website/admin");
       }
     } catch (error) {
-      console.error("Login error:", error);
       setError("root", {
         message: "Something went wrong, please refresh the page and try again",
       });
@@ -72,7 +74,7 @@ export const ModalPage = observer(() => {
               <input
                 {...register("mail", {
                   required: "Please enter your email",
-                  pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                  //pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
                 })}
                 type="text"
                 placeholder="Enter mail"

@@ -101,7 +101,7 @@ const Calendar = observer(() => {
               <tr key={uuidv4()}>
                 {week.map((day) => {
                   const currentFullDate = `${year}-${month + 1}-${day}`;
-                  const isDayBooked = store.currentMonthLessons.some(
+                  const isDayBooked = store.currentMonthLessonsMain.some(
                     (element) => element.date == currentFullDate
                   );
 

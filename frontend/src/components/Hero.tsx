@@ -1,9 +1,21 @@
+import { useEffect } from "react";
 import { heroSection } from "../constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { observer } from "mobx-react-lite";
+import { useAdminStore } from "../store/store";
 
-const Hero = () => {
+const Hero = observer(() => {
+  const store = useAdminStore();
+
+  useEffect(() => {
+    try {
+      store.checkToken(store.currentYear, store.currentMonth, store.currentDay);
+    } catch (e) {
+      store.setIsLoggedInToFalse();
+    }
+  }, []);
 
   return (
     <div className="flex flex-col justify-center items-center relative">
@@ -62,8 +74,13 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div className="self-start">          
-          <Link to="/english-teacher-website/login">Log In</Link> | Log Out       
+        <div className="self-start">
+          {store.isLoggedIn ? (
+            <Link to="/english-teacher-website/admin">My Cabinet </Link>
+          ) : (
+            <Link to="/english-teacher-website/login">Log In</Link>
+          )}
+          | Log Out
         </div>
       </div>
       <div className="top-0 right-0 absolute hero-bkg">
@@ -92,6 +109,6 @@ const Hero = () => {
       </div>
     </div>
   );
-};
+});
 
 export default Hero;

@@ -1,4 +1,3 @@
-
 export const getLessonsForMonth = async (year:number, month:number) => {
     try {
         const response = await fetch(

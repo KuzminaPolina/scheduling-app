@@ -2,6 +2,8 @@ import { makeAutoObservable } from "mobx";
 import { createContext, useContext } from "react";
 import { june } from "../constants";
 import { getLessonsForMonth } from "../api/lessonsForCurrentMonth";
+import { getLessonsForProvidedDate } from "../api/getLessonsForProvidedDate";
+import { checkTokenValidity } from "../api/checkToken";
 
 export interface lesson {
   id: number;
@@ -28,6 +30,16 @@ export interface lessonPerDay {
 export class AdminStore {
   constructor() {
     makeAutoObservable(this);
+  }
+
+  isLoggedIn: boolean = false;
+
+  setIsLoggedInToTrue() {
+    this.isLoggedIn = true;
+  }
+
+  setIsLoggedInToFalse() {
+    this.isLoggedIn = false;
   }
 
   date = new Date();
@@ -90,7 +102,7 @@ export class AdminStore {
     this.currentYear = year - 1;
   };
 
-  currentMonthLessons: month[] = june;
+  currentMonthLessonsMain: month[] = june;
 
   isCurrentMonthLessons: boolean = false;
 
@@ -99,7 +111,13 @@ export class AdminStore {
   };
 
   setCurrentMonthLessons = (data: month[]) => {
-    this.currentMonthLessons = data;
+    this.currentMonthLessonsMain = data;
+  };
+
+  currentMonthLessonsAdmin: month[] = june;
+
+  setCurrentMonthLessonsAdmin = (data: month[]) => {
+    this.currentMonthLessonsAdmin = data;
   };
 
   formatData = (data: month[]) => {
@@ -128,6 +146,23 @@ export class AdminStore {
     const formattedResponse = this.formatData(response);
     this.setCurrentMonthLessons(formattedResponse);
   }
+
+  async loadFullSchedule(year: number, month: number, day: number) {
+    const response = await getLessonsForProvidedDate(year, month, day);
+    if (response.length > 0) {
+      this.setCurrentMonthLessonsAdmin(response);
+      this.setIsCurrentMonthLessonsToTrue();
+    }
+  }
+
+  checkToken = async (year: number, month: number, day: number) => {
+    const response = await checkTokenValidity(year, month, day);
+    if (response.status != 200) {
+      this.setIsLoggedInToFalse();
+    } else {
+      this.setIsLoggedInToTrue();
+    }
+  };
 }
 
 export const AdminStoreContext = createContext<AdminStore | null>(null);

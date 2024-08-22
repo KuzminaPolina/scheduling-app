@@ -6,7 +6,7 @@ import { observer } from "mobx-react-lite";
 
 const date = new Date();
 
-type lesson = {
+/* type lesson = {
   id: number;
   email: string;
   firstName: string;
@@ -21,7 +21,7 @@ type month = {
   id: number;
   date: string;
   lessons: lesson[];
-};
+}; */
 
 const AdminPanel = observer(() => {
   const store = useAdminStore();
@@ -36,16 +36,12 @@ const AdminPanel = observer(() => {
   const [selectedMonth, setSelectedMonth] = useState(currentMonth);
   const [selectedDay, setSelectedDay] = useState(currentDay);
 
-  const token = localStorage.getItem("token");
-
   const getPrevMonth = (value: number) => {
     console.log(value);
   };
 
   const getNextMonth = (value: number) => {
-    const nextMonth = value + 1;
-    setSelectedMonth(nextMonth);
-    console.log(selectedMonth);
+    console.log(value);
   };
 
   const confirmLesson = (dayID: number, lessonID: number) => {
@@ -57,22 +53,7 @@ const AdminPanel = observer(() => {
     const getLessonsForProvidedDate = async () => {
       setIsLoading(true);
       try {
-        const request = new Request(
-          `/api_admin/get_lessons_for_a_month/${selectedYear}-${selectedMonth}-${selectedDay}`,
-          {
-            method: "GET",
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
-        const response = await fetch(request);
-        const data = (await response.json()) as month[];
-
-        if (data.length > 0) {
-          store.setIsCurrentMonthLessonsToTrue();
-          store.setCurrentMonthLessons(data);
-        }
+        store.loadFullSchedule(selectedYear, selectedMonth, selectedDay);
       } catch (e: any) {
         console.error("Request error:", e);
         setError(e);
@@ -200,7 +181,7 @@ const AdminPanel = observer(() => {
               </tr>
             </thead>
             <tbody>
-              {store.currentMonthLessons.map((day) => (
+              {store.currentMonthLessonsAdmin.map((day) => (
                 <Fragment key={day.id}>
                   {day.lessons.map((lesson) => (
                     <tr className="gradient-bg" key={lesson.id}>
