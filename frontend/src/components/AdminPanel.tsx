@@ -62,7 +62,7 @@ const AdminPanel = observer(() => {
       }
     };
     getLessonsForProvidedDate();
-  }, [selectedDay, selectedMonth, selectedYear]);
+  }, [selectedDay, selectedMonth, selectedYear, store.isLoggedIn]);
 
   if (isLoading) {
     return (
@@ -106,6 +106,39 @@ const AdminPanel = observer(() => {
             Back to home page
           </Link>
           <div>Something went wrong, please reload the page</div>
+        </div>
+      </section>
+    );
+  }
+
+  if (store.authError) {
+    return (
+      <section id="reviews" className="px-4 md:px-10 lg:px-32 py-28">
+        <div className="max-w-[80rem] mx-auto mb-24">
+          <div className="relative">
+            <p className="text-3xl md:text-6xl text-[#c8b0c9] text-right">
+              Admin's Panel
+            </p>
+            <h2 className="text-4xl md:text-5xl text-[#754444] font-bold text-right mr-28 md:mr-[280px] mt-[-10px] z-20">
+              控制面板
+            </h2>
+          </div>
+        </div>
+
+        <div className="max-w-[90rem] mx-auto diagonal flex flex-col items-center py-20">
+          <Link
+            to="/english-teacher-website"
+            className="cursor-pointer m-5 underline"
+          >
+            Return to home page
+          </Link>
+          <div className="ml-5">
+            You are not authorized.{" "}
+            <Link to="/english-teacher-website/login" className="underline">
+              Log In
+            </Link>{" "}
+            to view content.
+          </div>
         </div>
       </section>
     );

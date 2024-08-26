@@ -4,6 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 import { sendLoginDataToServer } from "../api/submitLoginData";
 import { useAdminStore } from "../store/store";
+import { useEffect } from "react";
 
 type FormFields = {
   username: string;
@@ -38,7 +39,7 @@ export const ModalPage = observer(() => {
         localStorage.setItem("token", tokenData.access_token);
         //Очистить значения ввода в форме
         reset();
-        store.isLoggedIn = true;
+        store.setIsLoggedInToTrue();
         //Перейти в личный кабинет
         navigate("/english-teacher-website/admin");
       }
@@ -46,6 +47,7 @@ export const ModalPage = observer(() => {
       setError("root", {
         message: "Something went wrong, please refresh the page and try again",
       });
+      store.setIsLoggedInToFalse();
     }
   };
 

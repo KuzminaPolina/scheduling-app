@@ -10,11 +10,7 @@ const Hero = observer(() => {
   const store = useAdminStore();
 
   useEffect(() => {
-    try {
-      store.checkToken(store.currentYear, store.currentMonth, store.currentDay);
-    } catch (e) {
-      store.setIsLoggedInToFalse();
-    }
+    store.checkToken(store.currentYear, store.currentMonth, store.currentDay);
   }, []);
 
   return (
@@ -76,11 +72,15 @@ const Hero = observer(() => {
         </div>
         <div className="self-start">
           {store.isLoggedIn ? (
-            <Link to="/english-teacher-website/admin">My Cabinet </Link>
+            <Link to="/english-teacher-website/admin">Teacher's Room</Link>
           ) : (
-            <Link to="/english-teacher-website/login">Log In</Link>
+            <Link to="/english-teacher-website/login">Teacher Login</Link>
+          )}{" "}
+          {store.isLoggedIn ? (
+            <button onClick={store.logOut}> | Log Out</button>
+          ) : (
+            <div></div>
           )}
-          | Log Out
         </div>
       </div>
       <div className="top-0 right-0 absolute hero-bkg">

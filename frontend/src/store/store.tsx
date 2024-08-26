@@ -32,6 +32,12 @@ export class AdminStore {
     makeAutoObservable(this);
   }
 
+  user: string | null = "";
+
+  setUser(name: string) {
+    this.user = name;
+  }
+
   isLoggedIn: boolean = false;
 
   setIsLoggedInToTrue() {
@@ -41,6 +47,12 @@ export class AdminStore {
   setIsLoggedInToFalse() {
     this.isLoggedIn = false;
   }
+
+  logOut = () => {
+    this.setIsLoggedInToFalse();
+    localStorage.removeItem("token");
+    this.setUser("");
+  };
 
   date = new Date();
   currentYear = this.date.getFullYear();
@@ -147,20 +159,36 @@ export class AdminStore {
     this.setCurrentMonthLessons(formattedResponse);
   }
 
+  authError: any = null;
+
+  setAuthError = (error: any) => {
+    this.authError = error;
+  };
+
   async loadFullSchedule(year: number, month: number, day: number) {
     const response = await getLessonsForProvidedDate(year, month, day);
-    if (response.length > 0) {
-      this.setCurrentMonthLessonsAdmin(response);
+    const data = (await response.json()) as month[];
+    if (response.status != 200) {
+      this.setAuthError(response.text);
+      throw Error;
+    }
+    if (data.length > 0) {
+      this.setCurrentMonthLessonsAdmin(data);
       this.setIsCurrentMonthLessonsToTrue();
     }
   }
 
   checkToken = async (year: number, month: number, day: number) => {
-    const response = await checkTokenValidity(year, month, day);
-    if (response.status != 200) {
-      this.setIsLoggedInToFalse();
-    } else {
-      this.setIsLoggedInToTrue();
+    try {
+      const response = await checkTokenValidity(year, month, day);
+      if (response) {
+        this.setIsLoggedInToTrue();
+      } else {
+        this.setIsLoggedInToFalse();
+      }
+    } catch (e) {
+      this.setIsLoggedInToFalse;
+      console.log(e);
     }
   };
 }
