@@ -175,6 +175,7 @@ export class AdminStore {
     if (data.length > 0) {
       this.setCurrentMonthLessonsAdmin(data);
       this.setIsCurrentMonthLessonsToTrue();
+      this.setAuthError(null);
     }
   }
 

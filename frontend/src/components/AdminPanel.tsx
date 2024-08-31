@@ -6,23 +6,6 @@ import { observer } from "mobx-react-lite";
 
 const date = new Date();
 
-/* type lesson = {
-  id: number;
-  email: string;
-  firstName: string;
-  lastName: string;
-  phone: string;
-  selectedDate: string;
-  selectedTime: string;
-  confirmed: boolean;
-};
-
-type month = {
-  id: number;
-  date: string;
-  lessons: lesson[];
-}; */
-
 const AdminPanel = observer(() => {
   const store = useAdminStore();
 
@@ -55,7 +38,6 @@ const AdminPanel = observer(() => {
       try {
         store.loadFullSchedule(selectedYear, selectedMonth, selectedDay);
       } catch (e: any) {
-        console.error("Request error:", e);
         setError(e);
       } finally {
         setIsLoading(false);

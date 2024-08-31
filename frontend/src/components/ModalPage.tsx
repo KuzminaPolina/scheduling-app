@@ -4,7 +4,6 @@ import { Link, useNavigate } from "react-router-dom";
 import { observer } from "mobx-react-lite";
 import { sendLoginDataToServer } from "../api/submitLoginData";
 import { useAdminStore } from "../store/store";
-import { useEffect } from "react";
 
 type FormFields = {
   username: string;
@@ -42,6 +41,7 @@ export const ModalPage = observer(() => {
         store.setIsLoggedInToTrue();
         //Перейти в личный кабинет
         navigate("/english-teacher-website/admin");
+        store.setAuthError(null);
       }
     } catch (error) {
       setError("root", {
