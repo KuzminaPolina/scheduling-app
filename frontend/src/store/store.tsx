@@ -32,6 +32,21 @@ export class AdminStore {
     makeAutoObservable(this);
   }
 
+  months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
   user: string | null = "";
 
   setUser(name: string) {
@@ -122,6 +137,10 @@ export class AdminStore {
     this.isCurrentMonthLessons = true;
   };
 
+  setIsCurrentMonthLessonsToFalse = () => {
+    this.isCurrentMonthLessons = false;
+  };
+
   setCurrentMonthLessons = (data: month[]) => {
     this.currentMonthLessonsMain = data;
   };
@@ -168,8 +187,12 @@ export class AdminStore {
   async loadFullSchedule(year: number, month: number, day: number) {
     const response = await getLessonsForProvidedDate(year, month, day);
     const data = (await response.json()) as month[];
-    if (response.status != 200) {
+    if (response.status == 401) {
       this.setAuthError(response.text);
+      throw Error;
+    }
+    if (response.status == 404) {
+      this.setIsCurrentMonthLessonsToFalse();
       throw Error;
     }
     if (data.length > 0) {

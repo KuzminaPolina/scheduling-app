@@ -19,13 +19,8 @@ const AdminPanel = observer(() => {
   const [selectedMonth, setSelectedMonth] = useState(currentMonth);
   const [selectedDay, setSelectedDay] = useState(currentDay);
 
-  const getPrevMonth = (value: number) => {
-    console.log(value);
-  };
-
-  const getNextMonth = (value: number) => {
-    console.log(value);
-  };
+  const months = store.months;
+  const currentMonthName = months[selectedMonth - 1];
 
   const confirmLesson = (dayID: number, lessonID: number) => {
     console.log(dayID);
@@ -149,14 +144,26 @@ const AdminPanel = observer(() => {
         <div className="arrows flex gap-3">
           <button
             onClick={() => {
-              getPrevMonth(currentMonth);
+              setSelectedMonth(selectedMonth - 1);
+              store.substractMonth(selectedMonth, selectedYear);
+              if (selectedMonth == 0) {
+                setSelectedMonth(11);
+                setSelectedYear(selectedYear - 1);
+                store.substractYear(selectedYear);
+              }
             }}
           >
             Back
           </button>
           <button
             onClick={() => {
-              getNextMonth(currentMonth);
+              setSelectedMonth(selectedMonth + 1);
+              store.addMonth(selectedMonth, selectedYear);
+              if (selectedMonth == 11) {
+                setSelectedMonth(0);
+                setSelectedYear(selectedYear + 1);
+                store.addYear(selectedYear);
+              }
             }}
           >
             Forward
@@ -243,7 +250,7 @@ const AdminPanel = observer(() => {
             </tbody>
           </table>
         ) : (
-          <div>No Lessons Booked for this month</div>
+          <div>No Lessons Booked for {currentMonthName}</div>
         )}
       </div>
     </section>
